@@ -2,7 +2,7 @@ from flask import Flask
 from config import Configuration
 from flask_cors import CORS
 
-application = Flask(__name__, static_folder='static/shared_assets', template_folder='static/engs_frontendEngine')
+application = Flask(__name__, static_folder='assets', template_folder='frontendEngine')
 
 application.config.from_object(Configuration)
 

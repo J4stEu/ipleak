@@ -1,0 +1,25 @@
+@import './normalize.scss';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+//Font settings
+$fFamily: 'Raleway', sans-serif;
+$fReqular: 400;
+$fMedium: 500;
+$fBold: 700;
+
+//default shadow
+$shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.5);
+//Const space value settings
+$spaceVal: 30;
+
+//assets settings
+$assPath: '../assets/visual/';
+
+//default styles settings
+*{
+    font-family: $fFamily;
+    font-weight: $fReqular;
+}
+body{
+    overflow-y: hidden;
+}
