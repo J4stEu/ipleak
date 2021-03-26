@@ -2,7 +2,28 @@ const axios = require('axios').default;
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
 const state = {
-    data: [],
+    data: {
+        "userData": {
+            "city": null,
+            "country": null,
+            "ip": null,
+            "loc": null,
+            "org": null,
+            "postal": null,
+            "region": null,
+            "timezone": null
+        },
+        "userProxy": {
+            "isProxy": null,
+            "proxyHeaders": null,
+            "realIp": null,
+            "realIpInfo": null
+        },
+        "userTOR": null,
+        "userVPN": {
+            "isVPN": null
+        }
+    }
 }
 const mutations = {
     'SET_DATA' (state, data) {
@@ -12,7 +33,7 @@ const mutations = {
 const actions = {
     initUserData: ({commit}) => {
         axios
-        .get('http://192.168.31.247:5000/api/user_ip_data')
+        .get('http://172.22.0.197:5000/api/user_ip_data')
         //.post('/api/user_ip_data')
         .then(response => {
             console.log(response.data)

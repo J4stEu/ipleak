@@ -34,8 +34,9 @@
 </template>
 
 <script>
+//import { mapState } from 'vuex';
+
 export default {
-  name: 'MainPg',
   data: function () {
     return {
       creator: {
@@ -47,10 +48,17 @@ export default {
   computed: {
     user() {
       return this.$store.getters.data;
-    },
+    }
+    /*localComputed () { 
+      
+     },
+    // смешиваем результат mapState с внешним объектом
+    ...mapState({
+      user: state => state.data,
+    })*/
   },
   created() {
-    this.$store.dispatch('initUserData');
+    this.$store.dispatch('initUserData')
   },
 }
 </script>
@@ -82,7 +90,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(4, $spaceVal * 10 + px);
     grid-auto-rows: #{$spaceVal * 10 + px};
-    grid-gap: $spaceVal/2 + px;
+    grid-gap: $spaceVal + px;
     justify-items: center;
     align-items: center;
     //align-items: center;
@@ -96,6 +104,11 @@ export default {
     //border-radius: $spaceVal + px;
     //z-index: 3;
 
+    @media screen and (min-width:0px) and (max-width:1349px) {
+      grid-template-columns: repeat(4, $spaceVal * 8 + px);
+      grid-auto-rows: #{$spaceVal * 8 + px};
+    }
+
     div {
       width: calc(100% - 60px);
       height: calc(100% - 60px);
@@ -106,6 +119,24 @@ export default {
         rgba(255, 255, 255, 0.7),
         rgba(255, 255, 255, 0.3),
       );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      overflow: hidden;
+
+      p {
+        margin: 5px;
+        @media screen and (min-width:0px) and (max-width:1349px) {
+          font-size: 0.9em;
+        }
+        color: green;
+
+        span {
+          color: black;
+          padding-right: 5px;
+        }
+      }
     }
   }
   /*.secondGlass, .thirdGlass {
