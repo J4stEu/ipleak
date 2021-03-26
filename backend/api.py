@@ -1,11 +1,12 @@
-from app import application
+from app import app
 from flask import request, jsonify
 import requests
 
 class userToIdentify(object):
     def __init__(self, request):
-        self.ip = '31.134.190.211'#request.environ['REMOTE_ADDR']
+        self.ip = request.environ['REMOTE_ADDR']
         self.headers = dict(request.headers)
+        # insert your token here
         self.getDataByIpToken = ''
         self.ipData = None
         self.proxyHeaders = ['CLIENT_IP','FORWARDED','FORWARDED_FOR',
@@ -46,7 +47,7 @@ class userToIdentify(object):
         return jsonify({'userData': self.dtData(), 'userProxy': self.dtProxy(), 'userVPN': self.VPN, 'userTOR': self.TOR})
 
 #get user data by ip
-@application.route('/api/user_ip_data', methods = ['GET'])
+@app.route('/api/user_ip_data', methods = ['GET'])
 def user_ip_data():
     user = userToIdentify(request)
     return user.dataPack(), 200
