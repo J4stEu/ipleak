@@ -2,7 +2,7 @@ const axios = require('axios').default;
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
 const state = {
-    data: false,
+    data: [],
 }
 const mutations = {
     'SET_DATA' (state, data) {
