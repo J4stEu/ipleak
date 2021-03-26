@@ -4,5 +4,4 @@ from flask import render_template
 @application.route('/', defaults={'path': ''})
 @application.route('/<path:path>')
 def catch_all(path):
-    return 'Hello world'
-    #return render_template('index.html')
+    return render_template('index.html')

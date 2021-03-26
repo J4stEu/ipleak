@@ -1,5 +1,5 @@
 const axios = require('axios').default;
-axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+//axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
 const state = {
     data: {
@@ -54,7 +54,7 @@ const mutations = {
 const actions = {
     initUserData: ({commit}) => {
         axios
-        .get('http://192.168.31.106:5000/api/user_ip_data')
+        .get('/api/user_ip_data')
         //.post('/api/user_ip_data')
         .then(response => {
             console.log(response.data)

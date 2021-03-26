@@ -4,7 +4,7 @@ import requests
 
 class userToIdentify(object):
     def __init__(self, request):
-        self.ip = '31.134.190.211'#request.environ['REMOTE_ADDR']
+        self.ip = request.environ['REMOTE_ADDR']
         self.headers = dict(request.headers)
         self.getDataByIpToken = '181fe8ffed4c9a'
         self.ipData = None
