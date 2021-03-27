@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.669c4ff7ed622d3806bda9bd3adc4f25.js"
+  "/precache-manifest.da1bd9dd6dbe72e1383fbff43eead493.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "ipleak"});

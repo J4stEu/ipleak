@@ -13,17 +13,18 @@ module.exports = {
     }
   },
   pwa: {
+    workboxPluginMode: 'GenerateSW',
     name:'J4stEuIPleak',
     manifestPath: '../assets/manifest.json',
     themeColor: '#ffffff',
     msTileColor: '#2b5797',
     appleMobileWebAppCapable: 'yes',
     iconPaths: {
-      favicon32: 'static/frontendEngine/icons/favicon-32x32.png',
-      favicon16: 'static/frontendEngine/icons/favicon-16x16.png',
-      appleTouchIcon: 'static/frontendEngine/icons/apple-touch-icon.png',
-      maskIcon: 'static/frontendEngine/icons/safari-pinned-tab.svg',
-      msTileImage: 'static/frontendEngine/icons/mstile-150x150.png'
+      favicon32: 'assets/icons/favicon-32x32.png',
+      favicon16: 'assets/icons/icons/favicon-16x16.png',
+      appleTouchIcon: 'assets/icons/icons/apple-touch-icon.png',
+      maskIcon: 'assets/icons/icons/safari-pinned-tab.svg',
+      msTileImage: 'assets/icons/icons/mstile-150x150.png'
     },
     manifestOptions: {
       icons:[
@@ -57,12 +58,10 @@ module.exports = {
           'sizes': '150x150',
           'type': 'image/png',
         },
-      ],
-      'start_url': '/',
-
+      ]
     }
   },
   productionSourceMap: false,
-  outputDir: '../static/frontendEngine',
+  outputDir: '../static/frontEndEngine',
   assetsDir: '../assets'
 };
