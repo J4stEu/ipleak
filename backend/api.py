@@ -1,4 +1,4 @@
-from app import application
+from app import app
 from flask import request, jsonify
 import requests
 
@@ -46,7 +46,7 @@ class userToIdentify(object):
         return jsonify({'userData': self.dtData(), 'userProxy': self.dtProxy(), 'userVPN': self.VPN, 'userTOR': self.TOR})
 
 #get user data by ip
-@application.route('/api/user_ip_data', methods = ['GET'])
+@app.route('/api/user_ip_data', methods = ['GET'])
 def user_ip_data():
     user = userToIdentify(request)
     return user.dataPack(), 200
