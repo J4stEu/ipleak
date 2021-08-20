@@ -6,7 +6,8 @@ class userToIdentify(object):
     def __init__(self, request):
         self.ip = request.environ['REMOTE_ADDR']
         self.headers = dict(request.headers)
-        self.getDataByIpToken = '181fe8ffed4c9a'
+        # insert your token here
+        self.getDataByIpToken = ''
         self.ipData = None
         self.proxyHeaders = ['CLIENT_IP','FORWARDED','FORWARDED_FOR',
                             'FORWARDED_FOR_IP','VIA','X_FORWARDED',
