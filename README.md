@@ -7,5 +7,5 @@ Stack:
 - Python (Flask).
 
 Demo:
-- Preloader
-![Registration - 1](https://github.com/J4stEu/engs/blob/master/projectDemo/ipleak_1.png?raw=true)
+- Interface and functions
+![Interface and functions](https://github.com/J4stEu/ipleak/blob/master/projectDemo/ipleak_1.png?raw=true)
